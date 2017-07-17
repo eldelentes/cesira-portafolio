@@ -4,14 +4,20 @@
     <title>Cesira Alvarado</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Asul:400,700|Nunito+Sans" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.png" type="image/png">
   </head>
   <body>
     <section class="intro">
+      <span class="left">Monterrey, MX</span>
       <div class="intro__content">
         <img src="images/avatar.jpg" class="avatar">
         <h2 class="intro__title">Graphic Designer Student & Photographer</h2>
         <span class="intro__subtitle">Illustration, Branding, Photo Journalism.</span>
+        <span class="right">Since 1996</span>
       </div>
+      <span class="intro__arrow">↓</span>
     </section>
     <section class="works">
       <div class="container">
@@ -31,5 +37,21 @@
         <img class="works__image" src="images/13.jpg">
       </div>
     </section>
+    <footer class="linksFooter">
+      <a href="https://www.instagram.com/cesiraalvarado/" class="linksFooter__link instagram" target="_blank">Follow me on Instagram</a>
+      <a href="https://www.behance.net/cesiraalvarado" class="linksFooter__link behance" target="_blank">Follow me on Behance</a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 420) {
+          $('.intro').addClass('active')
+          $('.linksFooter').addClass('active')
+        } else {
+          $('.intro').removeClass('active')
+          $('.linksFooter').removeClass('active')
+        }
+      });
+    </script>
   </body>
 </html>
