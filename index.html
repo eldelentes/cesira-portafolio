@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cesira Alvarado</title>
+    <title>Cesira Alvarado | Graphic Designer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Asul:400,700|Nunito+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asul:400,700|Poppins:700" rel="stylesheet">
+
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.png" type="image/png">
   </head>
@@ -12,14 +13,22 @@
     <section class="intro">
       <span class="left">Monterrey, MX</span>
       <div class="intro__content">
-        <img src="images/avatar.jpg" class="avatar">
-        <h2 class="intro__title">Graphic Designer Student & Photographer</h2>
-        <span class="intro__subtitle">Illustration, Branding, Photo Journalism.</span>
+        <h2 class="intro__title fadeIn">cesira.</h2>
+        <h4 class="intro__subtitle fadeIn">Graphic Designer, Student & Photographer</h4>
         <span class="right">Since 1996</span>
       </div>
       <span class="intro__arrow">↓</span>
     </section>
     <section class="works">
+      <header class="mainHeader">
+      <div class="container">
+        <h2 class="logo">cesira.</h2>
+        <nav>
+          <a class="mainNav__link instagram" href="https://www.instagram.com/cesiraalvarado/" target="_blank">Instagram</a>
+        <a class="mainNav__link behance" href="https://www.behance.net/cesiraalvarado" target="_blank">Behance</a>
+        </nav>
+      </div>
+      </header>
       <div class="container">
         <img class="works__image" src="images/1.jpg">
         <img class="works__image" src="images/2.jpg">
@@ -35,22 +44,33 @@
         <img class="works__image" src="images/12.gif">
         <img class="works__image" src="images/13.jpg">
         <img class="works__image" src="images/13.jpg">
+        <img class="works__image" src="images/14.jpg">
+        <img class="works__image" src="images/15.jpg">
+        <img class="works__image" src="images/16.jpg">
+        <img class="works__image" src="images/17.jpg">
+        <img class="works__image" src="images/18.jpg">
+        <img class="works__image" src="images/19.jpg">
       </div>
     </section>
-    <footer class="linksFooter">
-      <a href="https://www.instagram.com/cesiraalvarado/" class="linksFooter__link instagram" target="_blank">Follow me on Instagram</a>
-      <a href="https://www.behance.net/cesiraalvarado" class="linksFooter__link behance" target="_blank">Follow me on Behance</a>
+    <footer class="mainFooter">
+      <div class="container">
+        <h2 class="logo">cesira.</h2>
+        <a class="mailto:cesira.1996@gmail.com" href="#">cesira.1996@gmail.com</a>
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script type="text/javascript">
+      var mainHeaderTop = $('.mainHeader').offset().top;
       $(window).scroll(function(){
-        if ($(this).scrollTop() > 420) {
-          $('.intro').addClass('active')
-          $('.linksFooter').addClass('active')
+        var windowTop = $(this).scrollTop()
+        if ( windowTop> mainHeaderTop) {
+          $('.mainHeader').addClass('active')
         } else {
-          $('.intro').removeClass('active')
-          $('.linksFooter').removeClass('active')
+          $('.mainHeader').removeClass('active')
         }
+
+        $('.intro__title').css('transform', 'translateY(-' + windowTop * 0.300 + 'px)');
+        $('.intro__subtitle').css('transform', 'translateY(-' + windowTop * 0.100 + 'px)');
       });
     </script>
   </body>
