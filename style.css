@@ -238,4 +238,8 @@ body {
     	font-size: 5em;
     	letter-spacing: -4px;
     }
+
+    .intro {
+    	background-attachment: scroll;
+    }
 }
