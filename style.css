@@ -111,11 +111,8 @@ body {
 	100% { bottom: 2em; }
 }
 
-.works .container {
-	width: 80%;
-}
 
-.works { /* Masonry container */
+.works .container { /* Masonry container */
     -webkit-column-count: 4;
             column-count: 4;
     -webkit-column-gap: 1em;
@@ -144,9 +141,10 @@ body {
 	-webkit-box-shadow: 0 0.1em 1.2em rgba(0,0,0,0.05);
 	        box-shadow: 0 0.1em 1.2em rgba(0,0,0,0.05);
 	background: #fff;
-	position: absolute;
+	position: relative;
 	top: 0;
 	width: 100%;
+  z-index: 100;
 }
 
 .mainHeader.active {
@@ -193,7 +191,7 @@ body {
 }
 
 .behance:hover {
-	color: #3D75ED;
+	color: #9580FF;
 }
 
 .mainFooter {
@@ -224,7 +222,7 @@ body {
 
 
 @media only screen and (max-width: 400px) {
-    .works {
+    .works .container {
         -webkit-column-count: 1;
         column-count: 1;
     }
@@ -243,3 +241,6 @@ body {
     	background-attachment: scroll;
     }
 }
+
+
+
